@@ -7037,11 +7037,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/frantisekmoucha/Documents/C#/Personal/MzdovaKalkulackaAPI/TestAPI.csproj",
+      "projectUniqueName": "/Users/frantisekmoucha/Documents/C#/Personal/MzdovaKalkulackaAPI_old/TestAPI.csproj",
       "projectName": "TestAPI",
-      "projectPath": "/Users/frantisekmoucha/Documents/C#/Personal/MzdovaKalkulackaAPI/TestAPI.csproj",
+      "projectPath": "/Users/frantisekmoucha/Documents/C#/Personal/MzdovaKalkulackaAPI_old/TestAPI.csproj",
       "packagesPath": "/Users/frantisekmoucha/.nuget/packages/",
-      "outputPath": "/Users/frantisekmoucha/Documents/C#/Personal/MzdovaKalkulackaAPI/obj/",
+      "outputPath": "/Users/frantisekmoucha/Documents/C#/Personal/MzdovaKalkulackaAPI_old/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/frantisekmoucha/.nuget/NuGet/NuGet.Config"
