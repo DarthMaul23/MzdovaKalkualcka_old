@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QxvTsup7vKhbsT4lcyMHLgtOeSNKRkklY3TfngC0yl/3/dxMpWcnmqM4tFkL3YlSeUnzogtDcD1ipRVsitWBfg==",
+  "dgSpecHash": "8pKLVk2Kk1ILUx5vaUPc+lRsXOOhhT+g0+fMuBDU2E26O0ehUyms/o1EPsDwio6X3FChh1Vs3/A+if0FsIdptA==",
   "success": true,
-  "projectFilePath": "/Users/frantisekmoucha/Documents/C#/Personal/TestAPI/TestAPI.csproj",
+  "projectFilePath": "/Users/frantisekmoucha/Documents/C#/Personal/MzdovaKalkulackaAPI/TestAPI.csproj",
   "expectedPackageFiles": [
     "/Users/frantisekmoucha/.nuget/packages/bouncycastle.netcore/1.8.3/bouncycastle.netcore.1.8.3.nupkg.sha512",
     "/Users/frantisekmoucha/.nuget/packages/google.protobuf/3.11.4/google.protobuf.3.11.4.nupkg.sha512",
