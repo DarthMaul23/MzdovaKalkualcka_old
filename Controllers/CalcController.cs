@@ -1,24 +1,35 @@
+using System.Xml;
+using System;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Microsoft.AspNetCore.Mvc;
-using MzdovaKalkulackaAPI.Services;
+using TestAPI.Services;
+using TestAPI.Models;
 
-namespace MzdovaKalkulackaAPI.Controllers;
+namespace TestAPI.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
 public class CalcController : Controller
 {
-
+    
     IncomeService _CalcService;
 
     public CalcController(IncomeService calcService){
         _CalcService = calcService;
     }
 
-    [HttpGet]
+    [HttpPost]
     [Route("/MzdovaKalkulacka/kalkulace")]
-    public IActionResult GetCalculation(double hrubaMzda, bool slevaNaPoplatnika, bool student, int invalidita, int deti)
+    public IActionResult GetCalculation(IncomeItemRequest incomeRequest)
     {
-        return Ok(_CalcService.getCalculation(new IncomeItem(){BrutoIncome = hrubaMzda, Discount = slevaNaPoplatnika, Student = student, Disabled = invalidita, Childern = deti}));
+        return Ok(_CalcService.GetCalculation(incomeRequest));
+    }
+
+    [HttpGet]
+    [Route("/MzdovaKalkulacka/kalkulaceFields")]
+    public IActionResult GetFieldNames(){
+        return Ok(_CalcService.GetCalculationFields());
     }
 
 }

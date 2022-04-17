@@ -1,21 +1,26 @@
 using System;
-using MzdovaKalkulackaAPI.
-using MzdovaKalkulackaAPI.Models;
+using TestAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using static System.Guid;
-using System.Linq;
-using MzdovaKalkulackaAPI.Calculators;
+using TestAPI.Calculators;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
-namespace MzdovaKalkulackaAPI.Services{
+namespace TestAPI.Services{
 
     public class IncomeService{
 
         IncomeCalculator calculator = new IncomeCalculator();
 
-        public IncomeItem getCalculation(IncomeItem incomeItem){
+        public string GetCalculation(IncomeItemRequest incomeItem){
             
-            return calculator.GetIncomeCalculation(incomeItem);
+            return JsonConvert.SerializeObject(calculator.GetIncomeCalculation(incomeItem), Newtonsoft.Json.Formatting.Indented);
         }
 
+        public IncomeItemFieldNames GetCalculationFields(){
+
+            return new IncomeItemFieldNames();
+        }
+       
     }
 }

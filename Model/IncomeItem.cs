@@ -1,7 +1,7 @@
 using System;
 using static System.Guid;
 
-namespace MzdovaKalkulackaAPI
+namespace TestAPI
 {
     public class IncomeItem
     {

@@ -23,9 +23,7 @@ builder.Services.AddDbContext<UsersContext>(
                 .EnableDetailedErrors()
         );
 
-builder.Services.AddTransient<UserService>();
-builder.Services.AddTransient<NewsService>();
-builder.Services.AddTransient<FilesService>();
+builder.Services.AddTransient<IncomeService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

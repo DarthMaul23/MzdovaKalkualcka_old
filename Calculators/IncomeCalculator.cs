@@ -1,24 +1,52 @@
+using System.Threading.Tasks;
 using System;
-using MzdovaKalkulackaAPI.Models;
+using System.Text.Json;
+using TestAPI.Models;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
-namespace MzdovaKalkulackaAPI.Calculators
+namespace TestAPI.Calculators
 {
     public class IncomeCalculator
     {
         
+        IncomeItemRequest _request;
         IncomeItem _incomeItem;
 
         public IncomeCalculator(){
+            _incomeItem = new IncomeItem();
+        }
+
+        public JObject GetIncomeCalculation(IncomeItemRequest request){
+            
+            _request = request;
+
+            return GetIncome();
 
         }
 
-        public IncomeItem GetIncomeCalculation(IncomeItem incomeItem){
+        public JObject GetIncome(){
             
-            _incomeItem = incomeItem;
+            if(Convert.ToInt32(_request.BrutoIncome)>0){
 
-            calcIncome();
+                setUp();
+                calcIncome();
+                return JObject.Parse(JsonConvert.SerializeObject(_incomeItem));
 
-            return _incomeItem;
+            }else{
+                
+                return JObject.Parse(JsonConvert.SerializeObject(new Error(){ ErrorCode = "ErrorX01", ErrorMessage = "Hrubá mzda musí být vyšší než 0 Kč"}));
+            }
+        }
+
+        private void setUp(){
+
+            _incomeItem.BrutoIncome = _request.BrutoIncome;
+            _incomeItem.Student = _request.Student;
+            _incomeItem.Discount = _request.Discount;
+            _incomeItem.Childern = _request.Childern;
+            _incomeItem.Disabled = _request.Disabled;
+
         }
 
         private void calcIncome(){
