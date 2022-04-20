@@ -168,3 +168,4 @@
 /Users/frantisekmoucha/Documents/C#/Personal/MzdovaKalkulackaAPI_old/bin/Debug/net6.0/System.Text.Encodings.Web.dll
 /Users/frantisekmoucha/Documents/C#/Personal/MzdovaKalkulackaAPI_old/bin/Debug/net6.0/System.Text.Json.dll
 /Users/frantisekmoucha/Documents/C#/Personal/MzdovaKalkulackaAPI_old/bin/Debug/net6.0/runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll
+/Users/frantisekmoucha/Documents/C#/Personal/MzdovaKalkulackaAPI_old/bin/Debug/net6.0/JSON_Configs/Errors.json

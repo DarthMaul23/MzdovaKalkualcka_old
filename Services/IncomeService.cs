@@ -6,21 +6,25 @@ using TestAPI.Calculators;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 
-namespace TestAPI.Services{
+namespace TestAPI.Services
+{
 
-    public class IncomeService{
+    public class IncomeService
+    {
 
         IncomeCalculator calculator = new IncomeCalculator();
 
-        public string GetCalculation(IncomeItemRequest incomeItem){
-            
+        public string GetCalculation(IncomeItemRequest incomeItem)
+        {
+
             return JsonConvert.SerializeObject(calculator.GetIncomeCalculation(incomeItem), Newtonsoft.Json.Formatting.Indented);
         }
 
-        public IncomeItemFieldNames GetCalculationFields(){
+        public IncomeItemFieldNames GetCalculationFields()
+        {
 
             return new IncomeItemFieldNames();
         }
-       
+
     }
 }

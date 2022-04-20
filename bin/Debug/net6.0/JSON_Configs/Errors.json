@@ -1,0 +1,16 @@
+{
+    "Errors": [
+        {
+            "ErrorCode": "ErrorX01",
+            "ErrorMessage": "Hrubá mzda musí být vyšší než 0 Kč"
+        },
+        {
+            "ErrorCode": "ErrorX02",
+            "ErrorMessage": "Počet dětí nesmí být nižší než 0"
+        },
+        {
+            "ErrorCode": "ErrorX03",
+            "ErrorMessage": "Nesprávný stupeň invalidity."
+        }
+    ]
+}

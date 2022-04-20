@@ -12,10 +12,11 @@ namespace TestAPI.Controllers;
 [Route("api/[controller]")]
 public class CalcController : Controller
 {
-    
+
     IncomeService _CalcService;
 
-    public CalcController(IncomeService calcService){
+    public CalcController(IncomeService calcService)
+    {
         _CalcService = calcService;
     }
 
@@ -28,7 +29,8 @@ public class CalcController : Controller
 
     [HttpGet]
     [Route("/MzdovaKalkulacka/kalkulaceFields")]
-    public IActionResult GetFieldNames(){
+    public IActionResult GetFieldNames()
+    {
         return Ok(_CalcService.GetCalculationFields());
     }
 

@@ -42,7 +42,7 @@ namespace TestAPI.Services{
         }
 
         public Users getUserById(Guid userId){
-
+            
             return _usersContext.Users.Where(n => n.UserId == userId).FirstOrDefault();
         }
 
